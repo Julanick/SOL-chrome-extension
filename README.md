@@ -12,6 +12,8 @@ The SOL Chrome Extension is a demo example application that demonstrates how to 
 
 The SOL Chrome Extension provides a foundation for building Chrome extensions using Next.js, React, and other related technologies. It showcases the integration of Next.js and Chrome extension development by demonstrating a simple application with multiple pages.
 
+![Preview](screen.png)
+
 # Installation
 
 To install and run SOL Chrome Extension locally, follow these steps:

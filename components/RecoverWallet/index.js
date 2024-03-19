@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Button, Container } from 'react-bootstrap';
+import { Button, Container, Form } from 'react-bootstrap';
+import BackButton from '../Buttons/BackButton';
 
-const RecoverWallet = ({navigateToPage}) => {
+const RecoverWallet = ({ navigateToPage }) => {
     const [input, setInput] = useState('');
 
     const handleInputChange = (event) => {
@@ -9,11 +10,29 @@ const RecoverWallet = ({navigateToPage}) => {
     };
 
     return (
-        <Container className="mt-5 text-center">
-            <input type='text' placeholder="Введите пасс-фразу для восстановления" value={input} onChange={handleInputChange} className="form-control" />
-            <Button variant="primary" size="lg" onClick={() => navigateToPage('balance', input)} className="mt-2 w-100">
-                Далее
-            </Button>
+        <Container className="mt-5 text-center w-50">
+            <h5 className="m-3">Восстановление кошелька</h5>
+            <Form.Group>
+                <Form.Control
+                    type="text"
+                    placeholder="Введите пасс-фразу для восстановления"
+                    value={input}
+                    onChange={handleInputChange}
+                />
+            </Form.Group>
+
+            <Container className="m-3">
+                <BackButton navigateToPage={navigateToPage} />
+                <Button
+                    variant="success"
+                    size="lg"
+                    onClick={() => navigateToPage('balance', input)}
+                    className="m-3 w-50"
+                >
+                    Далее
+                </Button>
+            </Container>
+
         </Container>
     );
 };
