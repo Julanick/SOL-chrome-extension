@@ -10,7 +10,7 @@ const RecoverWallet = ({ navigateToPage }) => {
     };
 
     return (
-        <Container className="mt-5 text-center w-50">
+        <Container className="mt-5 text-center w-100">
             <h5 className="m-3">Восстановление кошелька</h5>
             <Form.Group>
                 <Form.Control
